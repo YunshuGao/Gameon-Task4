@@ -1,1 +1,101 @@
-<h1>My name is Yunshu Gao</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger Flips</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body, html {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Home Page (Blue Background) */
+        #home-page {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            background-color: blue;
+            padding: 20px;
+        }
+        .header {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .menu-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            gap: 15px;
+        }
+        .menu-btn {
+            width: 200px;
+            padding: 15px;
+            font-size: 18px;
+            background-color: white;
+            color: black;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Detail Page (Orange Background) */
+        #detail-page {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            background-color: orange;
+        }
+        .submit-btn {
+            width: 200px;
+            padding: 15px;
+            font-size: 18px;
+            background-color: white;
+            color: black;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Home Page Section -->
+    <div id="home-page">
+        <div class="header">burger flips</div>
+        <div class="menu-container">
+            <button class="menu-btn" onclick="goToDetailPage()">burger</button>
+            <button class="menu-btn" onclick="goToDetailPage()">fries</button>
+            <button class="menu-btn" onclick="goToDetailPage()">nugges</button>
+            <button class="menu-btn" onclick="goToDetailPage()">drink</button>
+        </div>
+    </div>
+
+    <!-- Detail Page Section -->
+    <div id="detail-page">
+        <button class="submit-btn">submit</button>
+    </div>
+
+    <script>
+        function goToDetailPage() {
+            // Hide the blue home page
+            document.getElementById('home-page').style.display = 'none';
+            // Show the orange detail page
+            document.getElementById('detail-page').style.display = 'flex';
+        }
+    </script>
+
+</body>
+</html>
